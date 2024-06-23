@@ -15,6 +15,6 @@ public class GetSavingsAccountsUseCaseImpl implements GetSavingsAccountsUseCase 
 
     @Override
     public List<SavingAccount> getSavingAccounts() {
-        return List.of();
+        return savingsAccountsRepositoryPort.findAllSavingAccounts();
     }
 }
