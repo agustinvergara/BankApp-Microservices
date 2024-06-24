@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
-public class AccountEntity { //es como un serializador de django, ESTO VA EN COMMON ENTITIES?
+public class AccountEntity {
     private int id;
     private String name;
     private String accountNumber;
