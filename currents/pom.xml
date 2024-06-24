@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.current-account</groupId>
 	<artifactId>currents</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>currents</name>
 	<description>Current Acount Service</description>
 	<url/>
