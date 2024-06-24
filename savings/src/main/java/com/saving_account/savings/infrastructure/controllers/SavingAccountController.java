@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/deposit-account")
 public class SavingAccountController {
 
     private final SavingsAccountsService savingsAccountsService;
