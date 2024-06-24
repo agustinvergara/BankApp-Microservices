@@ -20,10 +20,16 @@ CREATE TABLE accounts(
     PRIMARY KEY (account_id)
 );
 
+
+INSERT INTO `accounts` VALUES (1, 'agustin_ahorro', '04-18-55-384793-4', 24.30), (2, 'agustin_corriente', '03-15-65-467582-3', 100.30),(3, 'pedro_ahorro', '04-29-59-445633-4', 3000.50), (4, 'andres_corriente', '03-87-98-223793-3', 100000.70);
+
 CREATE TABLE account_type(
     account_type_id INTEGER NOT NULL UNIQUE AUTO_INCREMENT,
     type_name VARCHAR(20) NOT NULL UNIQUE
 );
+
+
+INSERT INTO `account_type` VALUES (1, 'saving_account'), (2, 'current_account');
 
 CREATE TABLE saving_account(
     saving_account_id INTEGER NOT NULL UNIQUE AUTO_INCREMENT,
@@ -34,6 +40,9 @@ CREATE TABLE saving_account(
     FOREIGN KEY (account_type_id) REFERENCES account_type(account_type_id)
 );
 
+
+INSERT INTO `saving_account` VALUES (1, 1, 1, 0),(2, 3, 1, 1); 
+
 CREATE TABLE current_account(
     current_account_id INTEGER NOT NULL UNIQUE AUTO_INCREMENT,
     account_id INTEGER NOT NULL,
@@ -42,3 +51,5 @@ CREATE TABLE current_account(
     FOREIGN KEY (account_id) REFERENCES accounts(account_id),
     FOREIGN KEY (account_type_id) REFERENCES account_type(account_type_id)
 );
+
+INSERT INTO `current_account` VALUES (1, 2, 2, 0), (2, 4, 2, 1); 
