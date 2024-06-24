@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 
-@FeignClient(name = "CurrentsAccountService", url = "http://localhost:8081")
+@FeignClient(name = "CurrentsAccountService", url = "http://localhost:8083")
 public interface CurrentAccountService {
     @GetMapping(value = "/current")
     ResponseDTO<List<CurrentAccount>> getsCurrentsAccounts();
