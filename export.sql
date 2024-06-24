@@ -41,7 +41,7 @@ CREATE TABLE saving_account(
 );
 
 
-INSERT INTO `saving_account` VALUES (1, 1, 1, 0),(2, 3, 1, 1); 
+INSERT INTO `saving_account` VALUES (1, 1, 1, 0),(2, 3, 1, 1);
 
 CREATE TABLE current_account(
     current_account_id INTEGER NOT NULL UNIQUE AUTO_INCREMENT,
@@ -52,4 +52,23 @@ CREATE TABLE current_account(
     FOREIGN KEY (account_type_id) REFERENCES account_type(account_type_id)
 );
 
-INSERT INTO `current_account` VALUES (1, 2, 2, 0), (2, 4, 2, 1); 
+INSERT INTO `current_account` VALUES (1, 2, 2, 0), (2, 4, 2, 1);
+
+DELIMITER $$
+CREATE PROCEDURE get_savings_accounts()
+BEGIN
+    SELECT accounts.account_id, account_name, account_number, balance, is_christmas_account, type_name FROM saving_account
+            LEFT JOIN accounts ON saving_account.account_id = accounts.account_id
+            LEFT JOIN account_type ON saving_account.account_type_id = account_type.account_type_id;
+END $$
+DELIMITER ;
+
+
+DELIMITER $$
+CREATE PROCEDURE get_currents_accounts()
+BEGIN
+	SELECT accounts.account_id, account_name, account_number, balance, is_money_market, type_name FROM current_account
+            LEFT JOIN accounts ON current_account.account_id = accounts.account_id
+            LEFT JOIN account_type ON current_account.account_type_id = account_type.account_type_id;
+END $$
+DELIMITER ;

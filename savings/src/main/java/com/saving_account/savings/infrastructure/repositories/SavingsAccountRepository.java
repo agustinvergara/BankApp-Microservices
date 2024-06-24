@@ -31,9 +31,7 @@ public class SavingsAccountRepository implements SavingsAccountsRepositoryPort {
     public List<SavingAccount> findAllSavingAccounts() {
 
         List<SavingAccountEntity> accounts = mySqlJdbcTemplate.query("""
-                SELECT account_id, account_account_name, account_number, balance, is_christmas_account, type_name FROM saving_account
-                LEFT JOIN accounts ON saving_account.account_id = accounts.account_id
-                LEFT JOIN account_type ON saving_account.account_type_id = account_type.account_type_id;
+                CALL get_savings_accounts()
                 """, savingsAccountRowMapper);
 
         log.info("DATA-SIZE: {}", accounts.size());

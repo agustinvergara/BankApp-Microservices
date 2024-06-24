@@ -30,9 +30,7 @@ public class CurrentAccountsRepository implements CurrentAccountsRepositoryPort 
     public List<CurrentAccount> findAllCurrentAccounts() {
 
         List<CurrentAccountEntity> accounts = mySqlJdbcTemplate.query("""
-                SELECT account_id, account_name, account_number, balance, is_money_market, type_name FROM current_account
-                LEFT JOIN accounts ON current_account.account_id = accounts.account_id
-                LEFT JOIN account_type ON current_account.account_type_id = account_type.account_type_id;
+                   CALL get_currents_accounts();
                 """, currentAccountRowMapper);
 
         log.info("ejecutando store procedure");
