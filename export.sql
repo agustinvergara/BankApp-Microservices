@@ -1,6 +1,14 @@
 DROP DATABASE IF EXISTS account_management_db;
 
+DROP USER IF EXISTS 'dbmanager'@'localhost' ;
+
 CREATE DATABASE account_management_db;
+
+CREATE USER  'dbmanager'@'localhost' IDENTIFIED BY 'wfF445..-36';
+
+GRANT ALL PRIVILEGES ON account_management_db.* TO 'dbmanager'@'localhost';
+
+FLUSH PRIVILEGES;
 
 USE account_management_db;
 
