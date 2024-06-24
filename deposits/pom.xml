@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.deposit-account</groupId>
 	<artifactId>deposits</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>deposits</name>
 	<description>Deposits Acount Service</description>
 	<url/>
