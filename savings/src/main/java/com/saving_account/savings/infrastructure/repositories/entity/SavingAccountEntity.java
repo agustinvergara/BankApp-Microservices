@@ -15,9 +15,7 @@ public class SavingAccountEntity extends AccountEntity{
     public static SavingAccount entityToDomain(SavingAccountEntity savingAccountEntity){
         SavingAccount savingAccount = new SavingAccount();
 
-        //REMEMBER PUT ID
-        //savingAccount.setId(savingAccountEntity.getId());
-
+        savingAccount.setId(savingAccountEntity.getId());
         savingAccount.setName(savingAccountEntity.getName());
         savingAccount.setAccountNumber(savingAccountEntity.getAccountNumber());
         savingAccount.setBalance(savingAccountEntity.getBalance());

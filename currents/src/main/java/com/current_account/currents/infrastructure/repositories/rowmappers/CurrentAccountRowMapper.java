@@ -13,6 +13,7 @@ public class CurrentAccountRowMapper implements RowMapper<CurrentAccountEntity>{
 
         CurrentAccountEntity account = new CurrentAccountEntity();
 
+        account.setId(rs.getInt("account_id"));
         account.setName(rs.getString("account_name"));
         account.setAccountNumber(rs.getString("account_number"));
         account.setBalance(rs.getDouble("balance"));

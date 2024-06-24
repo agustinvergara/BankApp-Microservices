@@ -13,7 +13,8 @@ public class SavingsAccountRowMapper implements RowMapper<SavingAccountEntity> {
     public SavingAccountEntity mapRow(ResultSet rs, int rowNum) throws SQLException {
 
         SavingAccountEntity account = new SavingAccountEntity();
-
+        
+        account.setId(rs.getInt("account_id"));
         account.setName(rs.getString("account_name"));
         account.setAccountNumber(rs.getString("account_number"));
         account.setBalance(rs.getDouble("balance"));

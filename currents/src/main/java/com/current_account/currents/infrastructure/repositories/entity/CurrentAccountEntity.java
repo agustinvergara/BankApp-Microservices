@@ -9,15 +9,14 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public class CurrentAccountEntity extends AccountEntity { // VA EN COMMON ENTITIES?
+public class CurrentAccountEntity extends AccountEntity {
     private boolean isMoneyMarket;
 
     //MAPPER TO DOMAIN
     public static CurrentAccount entityToDomain(CurrentAccountEntity currentAccountEntity){
         CurrentAccount currentAccount = new CurrentAccount();
 
-        //REMEMBER PUT ID
-
+        currentAccount.setId(currentAccountEntity.getId());
         currentAccount.setName(currentAccountEntity.getName());
         currentAccount.setAccountNumber(currentAccountEntity.getAccountNumber());
         currentAccount.setBalance(currentAccountEntity.getBalance());
