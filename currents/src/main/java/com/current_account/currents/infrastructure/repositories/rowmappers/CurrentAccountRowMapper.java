@@ -1,11 +1,11 @@
 package com.current_account.currents.infrastructure.repositories.rowmappers;
 
-import com.current_account.currents.domain.models.CurrentAccount;
-import com.current_account.currents.infrastructure.repositories.entity.CurrentAccountEntity;
-import org.springframework.jdbc.core.RowMapper;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.current_account.currents.infrastructure.repositories.entity.CurrentAccountEntity;
 
 public class CurrentAccountRowMapper implements RowMapper<CurrentAccountEntity>{
     @Override

@@ -1,8 +1,9 @@
 package com.current_account.currents.application.services;
 
-import com.current_account.currents.domain.models.CurrentAccount;
-import com.current_account.currents.domain.ports.in.GetCurrentAccountUseCases;
 import java.util.List;
+
+import com.common_entities.entities.CurrentAccount;
+import com.current_account.currents.domain.ports.in.GetCurrentAccountUseCases;
 
 public class CurrentAccountsService implements GetCurrentAccountUseCases {
     private final GetCurrentAccountUseCases getCurrentAccountUseCases;

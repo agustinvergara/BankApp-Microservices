@@ -1,8 +1,10 @@
-package com.saving_account.savings.domain.ports.out;
+package com.saving_account.savings.Domain.ports.out;
 
-import com.saving_account.savings.domain.models.SavingAccount;
 
 import java.util.List;
+
+import com.common_entities.entities.SavingAccount;
+
 
 public interface SavingsAccountsRepositoryPort {
     List<SavingAccount> findAllSavingAccounts();

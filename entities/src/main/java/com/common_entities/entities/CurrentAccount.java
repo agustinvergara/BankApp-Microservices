@@ -11,6 +11,6 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 @AllArgsConstructor
 @Component
-public class CurrentAccount extends Account{
-    private boolean isMoneyMarket;
+public class CurrentAccount extends Account {
+	private boolean isMoneyMarket;
 }

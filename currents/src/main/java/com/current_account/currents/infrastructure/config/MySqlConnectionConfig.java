@@ -1,6 +1,7 @@
 package com.current_account.currents.infrastructure.config;
 
-import lombok.extern.slf4j.Slf4j;
+import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -10,7 +11,7 @@ import org.springframework.context.annotation.DependsOn;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.sql.DataSource;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Configuration

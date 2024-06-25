@@ -1,9 +1,9 @@
-package com.saving_account.savings.application.services;
-
-import com.saving_account.savings.domain.models.SavingAccount;
-import com.saving_account.savings.domain.ports.in.GetSavingsAccountsUseCase;
+package com.saving_account.savings.Application.services;
 
 import java.util.List;
+
+import com.common_entities.entities.SavingAccount;
+import com.saving_account.savings.Domain.ports.in.GetSavingsAccountsUseCase;
 
 public class SavingsAccountsService implements GetSavingsAccountsUseCase {
     private final GetSavingsAccountsUseCase getSavingsAccountsUseCase;

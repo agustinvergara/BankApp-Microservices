@@ -1,16 +1,15 @@
-package com.saving_account.savings.infrastructure.controllers;
+package com.saving_account.savings.Infrastructure.controllers;
 
+import java.util.List;
 
-import com.saving_account.savings.application.services.SavingsAccountsService;
-import com.saving_account.savings.domain.models.SavingAccount;
-import com.saving_account.savings.infrastructure.DTO.ResponseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.common_entities.entities.ResponseDTO;
+import com.common_entities.entities.SavingAccount;
+import com.saving_account.savings.Application.services.SavingsAccountsService;
 
 @RestController
 public class SavingAccountController {

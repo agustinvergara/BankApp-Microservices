@@ -1,17 +1,19 @@
-package com.saving_account.savings.infrastructure.repositories;
+package com.saving_account.savings.Infrastructure.repositories;
 
 
-import com.saving_account.savings.domain.models.SavingAccount;
-import com.saving_account.savings.domain.ports.out.SavingsAccountsRepositoryPort;
-import com.saving_account.savings.infrastructure.repositories.entity.SavingAccountEntity;
-import com.saving_account.savings.infrastructure.repositories.rowmappers.SavingsAccountRowMapper;
-import lombok.extern.slf4j.Slf4j;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-import java.util.stream.Collectors;
+import com.common_entities.entities.SavingAccount;
+import com.saving_account.savings.Domain.ports.out.SavingsAccountsRepositoryPort;
+import com.saving_account.savings.Infrastructure.repositories.entity.SavingAccountEntity;
+import com.saving_account.savings.Infrastructure.repositories.rowmappers.SavingsAccountRowMapper;
+
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Repository

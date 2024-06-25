@@ -1,10 +1,11 @@
-package com.saving_account.savings.infrastructure.config;
+package com.saving_account.savings.Infrastructure.config;
 
-import com.saving_account.savings.application.services.SavingsAccountsService;
-import com.saving_account.savings.application.usecases.GetSavingsAccountsUseCaseImpl;
-import com.saving_account.savings.domain.ports.out.SavingsAccountsRepositoryPort;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import com.saving_account.savings.Application.services.SavingsAccountsService;
+import com.saving_account.savings.Application.usecases.GetSavingsAccountsUseCaseImpl;
+import com.saving_account.savings.Domain.ports.out.SavingsAccountsRepositoryPort;
 
 @Configuration
 public class ServicesConfig {

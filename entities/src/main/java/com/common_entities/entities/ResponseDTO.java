@@ -1,4 +1,4 @@
-package com.saving_account.savings.infrastructure.DTO;
+package com.common_entities.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

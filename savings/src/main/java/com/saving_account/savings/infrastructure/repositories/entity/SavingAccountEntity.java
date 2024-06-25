@@ -1,6 +1,7 @@
-package com.saving_account.savings.infrastructure.repositories.entity;
+package com.saving_account.savings.Infrastructure.repositories.entity;
 
-import com.saving_account.savings.domain.models.SavingAccount;
+import com.common_entities.entities.SavingAccount;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -8,8 +9,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public class SavingAccountEntity extends AccountEntity{
-    private Boolean isChristmasAccount;
+public class SavingAccountEntity extends AccountEntity {
+    private static final long serialVersionUID = 8681272510905497775L;
+    
+	private Boolean isChristmasAccount;
 
     //MAPPER TO DOMAIN
     public static SavingAccount entityToDomain(SavingAccountEntity savingAccountEntity){

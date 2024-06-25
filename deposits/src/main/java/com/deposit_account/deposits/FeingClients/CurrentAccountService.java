@@ -1,12 +1,12 @@
 package com.deposit_account.deposits.FeingClients;
 
-import com.deposit_account.deposits.DTO.ResponseDTO;
-import com.deposit_account.deposits.Models.CurrentAccount;
+import java.util.List;
+
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.List;
+import com.common_entities.entities.CurrentAccount;
+import com.common_entities.entities.ResponseDTO;
 
 
 @FeignClient(name = "CurrentsAccountService", url = "http://localhost:8083")

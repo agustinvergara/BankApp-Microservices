@@ -1,4 +1,4 @@
-package com.saving_account.savings.infrastructure.config;
+package com.saving_account.savings.Infrastructure.config;
 
 
 import lombok.extern.slf4j.Slf4j;

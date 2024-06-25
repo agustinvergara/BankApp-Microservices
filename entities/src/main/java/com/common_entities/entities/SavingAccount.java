@@ -9,6 +9,6 @@ import org.springframework.stereotype.Component;
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @Component
-public class SavingAccount extends Account{ //Clase modelo saving account hija de Account
+public class SavingAccount extends Account {
     private boolean isChristmasAccount;
 }

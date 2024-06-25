@@ -1,6 +1,6 @@
-package com.saving_account.savings.infrastructure.repositories.rowmappers;
+package com.saving_account.savings.Infrastructure.repositories.rowmappers;
 
-import com.saving_account.savings.infrastructure.repositories.entity.SavingAccountEntity;
+import com.saving_account.savings.Infrastructure.repositories.entity.SavingAccountEntity;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
