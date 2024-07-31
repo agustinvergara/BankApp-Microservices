@@ -1,5 +1,5 @@
 
-# Reto2-Vergara
+# BankApp-Microservices
 
 Este proyecto es una aplicación de cuentas bancarias que gestiona cuentas de ahorro y cuentas corrientes. La aplicación está dividida en tres microservicios: deposits, savings y currents.
 
